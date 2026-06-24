@@ -1,59 +1,97 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script src="https://cdn.tailwindcss.com"></script>
+<title>Recruitment ATS</title>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 min-h-screen">
+
+<div class="max-w-md mx-auto">
+
+```
+<!-- Header -->
+<div class="bg-white p-4 shadow-sm">
+    <h1 class="text-2xl font-bold">
+        Recruitment ATS
+    </h1>
+    <p class="text-sm text-gray-500">
+        Yayasan / Sekolah
+    </p>
+</div>
+
+<!-- Summary -->
+<div class="p-4">
+
+    <div class="grid grid-cols-2 gap-3">
+
+        <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-gray-500 text-sm">
+                Total Kandidat
+            </div>
+            <div id="total" class="text-3xl font-bold">
+                0
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-gray-500 text-sm">
+                Need Review
+            </div>
+            <div id="review" class="text-3xl font-bold">
+                0
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Quick Menu -->
+
+<div class="px-4">
+
+    <a href="candidates.html"
+       class="block bg-blue-600 text-white p-4 rounded-xl text-center font-semibold">
+
+       Kandidat
+
+    </a>
+
+</div>
+
+<!-- Recent Candidates -->
 
 <div class="p-4">
 
-<h1 class="text-2xl font-bold mb-4">
-Recruitment Dashboard
-</h1>
+    <div class="flex justify-between items-center mb-3">
+        <h2 class="font-semibold">
+            Kandidat Terbaru
+        </h2>
 
-<div class="grid grid-cols-2 gap-3">
+        <a href="candidates.html"
+           class="text-blue-600 text-sm">
+            Lihat Semua
+        </a>
+    </div>
 
-<div class="bg-white rounded-xl p-4">
-<div class="text-gray-500">Total</div>
-<div id="total" class="text-3xl font-bold">
-0
-</div>
-</div>
+    <div id="recentCandidates">
 
-<div class="bg-white rounded-xl p-4">
-<div class="text-gray-500">Proceed</div>
-<div id="proceed" class="text-3xl font-bold">
-0
-</div>
-</div>
+        <div class="bg-white rounded-xl p-4">
+            Loading...
+        </div>
 
-<div class="bg-white rounded-xl p-4">
-<div class="text-gray-500">Interview</div>
-<div id="interview" class="text-3xl font-bold">
-0
-</div>
-</div>
-
-<div class="bg-white rounded-xl p-4">
-<div class="text-gray-500">Rejected</div>
-<div id="rejected" class="text-3xl font-bold">
-0
-</div>
-</div>
+    </div>
 
 </div>
-
-<a
-href="candidates.html"
-class="block mt-6 bg-blue-600 text-white p-3 rounded-xl text-center">
-View Candidates
-</a>
+```
 
 </div>
 
 <script src="js/config.js"></script>
+
 <script src="js/dashboard.js"></script>
 
 </body>
